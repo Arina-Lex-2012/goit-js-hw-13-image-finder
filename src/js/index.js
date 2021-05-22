@@ -20,6 +20,9 @@ function onSearch(event){
         clearPhotosContainer();
         appendPhotosMarkup(photos);
     });
+    setTimeout(() =>{
+        refs.loadMoreBtn.removeAttribute('hidden');
+    }, 1000);
 };
 
 // функция догрузки фотографий
@@ -29,7 +32,6 @@ function onLoadMore(){
 
 // разметка для карточки фотографии
 function appendPhotosMarkup(photos){
-    console.log(photos);
     refs.photosContainer.insertAdjacentHTML('beforeend', photosTpl(photos));
 };
 
@@ -37,3 +39,8 @@ function appendPhotosMarkup(photos){
 function clearPhotosContainer(){
     refs.photosContainer.innerHTML = '';
 };
+
+refs.photosContainer.scrollIntoView({
+  behavior: 'smooth',
+  block: 'end',
+});

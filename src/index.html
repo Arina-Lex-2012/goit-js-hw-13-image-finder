@@ -17,26 +17,30 @@
     <link rel="stylesheet" href="./sass/main.scss" />
   </head>
   <body>
-    <p>Start looking for photos</p> 
+    <div class="container">
+      <p class="header-text">Let's find your favourite photo</p> 
 
-    <form class="js-search-form" id="search-form">
-      <input
-        type="text"
-        name="query"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
+      <form class="search-form js-search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
 
-      <button type="submit" class="btn btn-search">Search</button>
-    </form>
+        <button type="submit" class="btn btn-search">Search</button>
+      </form>
 
-    <ul class="gallery"></ul>
+      <ul class="gallery"></ul>
+    </body>
 
-
-    <button type="button" class="btn btn-load-more" data-action="load-more">
-      <span class="spinner-border spinner-border-sn spinner" role="status" aria-hidden="true"></span>
-      <span class="label">Load more</span>
-    </button>
+    <div class="load-more-container">
+      <button type="button" class="btn btn-load-more" data-action="load-more" hidden>
+        <span class="spinner-border spinner-border-sn spinner" role="status" aria-hidden="true"></span>
+        <span class="label">Load more</span>
+      </button>
+    </div>    
+    
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./js/index.js"></script>
   </body>

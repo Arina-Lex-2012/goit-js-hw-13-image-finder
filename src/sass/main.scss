@@ -1,7 +1,32 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+.gallery {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .gallery li {
+    margin-left: 30px;
+    list-style: none;
+    outline: 2px solid red;
+  }
+
+.gallery img{
+    display: flex;        
+}
+
+
+ .stats{
+    display: flex;
+    justify-content: center;
+ }
+
+ .stats-item {
+    display: flex;
+    margin-left: 30px;
+ }
+
+ .stats-item .material-icons{
+    margin-right: 5px;
+    color: grey;
+ }
+

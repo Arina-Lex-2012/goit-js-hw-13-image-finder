@@ -1,7 +1,7 @@
 import '../sass/main.scss';
 import photosTpl from '../templates/photos.hbs';
 import getRefs from './get-refs.js';
-import PhotosApiService from "./photos-service.js";
+import PhotosApiService from "./apiService.js";
 
 const refs = getRefs();
 
@@ -30,19 +30,10 @@ function onLoadMore(){
 // разметка для карточки фотографии
 function appendPhotosMarkup(photos){
     console.log(photos);
-    refs.photosContainer.insertAdjacentHTML('beforeend', photosTpl(photos[0]));
+    refs.photosContainer.insertAdjacentHTML('beforeend', photosTpl(photos));
 };
 
 // очистка контейнера
 function clearPhotosContainer(){
     refs.photosContainer.innerHTML = '';
 };
-
-
-
-
-
-
-
-
-

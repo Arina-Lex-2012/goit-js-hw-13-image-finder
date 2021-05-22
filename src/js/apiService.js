@@ -19,7 +19,7 @@ export default class PhotosApiService{
         })
         .then(({ hits }) => {
             this.incrementPage();
-            // console.log(data.hits);            
+     
             return hits;
         }); 
     }

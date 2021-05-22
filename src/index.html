@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="./sass/_styles.scss" /> -->
+    <link rel="stylesheet" href="./sass/main.scss" />
   </head>
   <body>
     <p>Start looking for photos</p> 
@@ -33,7 +33,10 @@
     <ul class="gallery"></ul>
 
 
-    <button type="button" class="btn btn-load-more" data-action="load-more">Load more</button>
+    <button type="button" class="btn btn-load-more" data-action="load-more">
+      <span class="spinner-border spinner-border-sn spinner" role="status" aria-hidden="true"></span>
+      <span class="label">Load more</span>
+    </button>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./js/index.js"></script>
   </body>

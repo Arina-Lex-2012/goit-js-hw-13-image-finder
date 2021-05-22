@@ -27,7 +27,15 @@ function onSearch(event){
 
 // функция догрузки фотографий
 function onLoadMore(){
-    photosApiService.fetchPhotos().then(appendPhotosMarkup);  
+    photosApiService.fetchPhotos().then(appendPhotosMarkup);
+    
+    setTimeout(() =>{
+        refs.scrollContainer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+          });
+    }, 500);
+
 };
 
 // разметка для карточки фотографии
@@ -40,7 +48,3 @@ function clearPhotosContainer(){
     refs.photosContainer.innerHTML = '';
 };
 
-refs.photosContainer.scrollIntoView({
-  behavior: 'smooth',
-  block: 'end',
-});

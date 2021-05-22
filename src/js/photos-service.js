@@ -17,10 +17,10 @@ export default class PhotosApiService{
         .then(response => {
             return response.json();
         })
-        .then(data => {
+        .then(({ hits }) => {
             this.incrementPage();
             // console.log(data.hits);            
-            return data.hits;
+            return hits;
         }); 
     }
 

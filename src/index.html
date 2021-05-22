@@ -17,7 +17,7 @@
     <!-- <link rel="stylesheet" href="./sass/_styles.scss" /> -->
   </head>
   <body>
-    <p>Введи запрос на поиск картинок</p> 
+    <p>Start looking for photos</p> 
 
     <form class="js-search-form" id="search-form">
       <input
@@ -30,11 +30,10 @@
       <button type="submit" class="btn btn-search">Search</button>
     </form>
 
-    <ul class="photos js-photos-container"></ul>
+    <ul class="gallery"></ul>
+
 
     <button type="button" class="btn btn-load-more" data-action="load-more">Load more</button>
-     
-    <span class="label"> Показать еще </span>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./js/index.js"></script>
   </body>

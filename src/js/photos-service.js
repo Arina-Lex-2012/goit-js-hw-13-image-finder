@@ -1,26 +1,35 @@
 export default class PhotosApiService{
     constructor(){
         this.searchQuery = '';
+        this.page = 1;
     }
 
-    fetchPhotos(searchQuery){
+    fetchPhotos(){
         // const options = {
         //     headers: {
         //         key: '21731016-f00a62a1d829b8e9d99c92f14',
         //     },
         // };
         
-        const url= `https://pixabay.com/api/?key=21731016-f00a62a1d829b8e9d99c92f14&image_type=photo&page=1&per_page=12&q=${this.searchQuery}`;
+        const url= `https://pixabay.com/api/?key=21731016-f00a62a1d829b8e9d99c92f14&image_type=photo&page=${this.page}&per_page=12&q=${this.searchQuery}`;
 
-        fetch(url)
+        return fetch(url)
         .then(response => {
             return response.json();
         })
-        .then(photo => {
-            console.log(photo);
-            // const markup = photoCardTpl(photo);
-            // console.log(markup);
+        .then(data => {
+            this.incrementPage();
+            // console.log(data.hits);            
+            return data.hits;
         }); 
+    }
+
+    incrementPage(){
+        this.page += 1;
+    }
+
+    resetPage(){
+        this.page = 1;
     }
 
     get query(){

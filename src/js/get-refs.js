@@ -1,6 +1,6 @@
 export default function getRefs(){
     return {        
-        photosContainer: document.querySelector('.js-photos-container'),
+        photosContainer: document.querySelector('.gallery'),
         searchForm: document.querySelector('.js-search-form'),
         loadMoreBtn: document.querySelector('[data-action="load-more"]'),
     };

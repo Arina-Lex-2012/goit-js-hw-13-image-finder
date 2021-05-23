@@ -28,20 +28,10 @@ function onSearch(event){
 // функция догрузки фотографий
 function onLoadMore(){
     photosApiService.fetchPhotos().then(appendPhotosMarkup);
-    console.log(refs.photosContainer);
-
-    const scrollOptions = {
-        
-    };
     
     setTimeout(() =>{
-        // refs.photosContainer.scrollIntoView({
-        //     behavior: 'smooth',
-        //     block: 'end',
-        //   });
         window.scrollBy({
             top: 300,
-            left: 100,
             behavior: 'smooth'});
     }, 500);
 };

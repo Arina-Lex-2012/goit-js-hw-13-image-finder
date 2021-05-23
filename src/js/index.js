@@ -28,14 +28,15 @@ function onSearch(event){
 // функция догрузки фотографий
 function onLoadMore(){
     photosApiService.fetchPhotos().then(appendPhotosMarkup);
+    console.log(refs.photosContainer);
     
     setTimeout(() =>{
-        refs.scrollContainer.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end',
-          });
+        // refs.photosContainer.scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'end',
+        //   });
+        window.scrollBy(0, 250);
     }, 500);
-
 };
 
 // разметка для карточки фотографии

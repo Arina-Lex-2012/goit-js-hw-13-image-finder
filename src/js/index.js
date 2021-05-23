@@ -35,7 +35,7 @@ function onLoadMore(){
         //     behavior: 'smooth',
         //     block: 'end',
         //   });
-        window.scrollBy(0, 250);
+        window.scrollBy(0, 300);
     }, 500);
 };
 
